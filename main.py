@@ -1,6 +1,5 @@
 import math
 
-
 def find_roots(a, b, c):
   discriminant = b**2 - 4 * a * c
 
