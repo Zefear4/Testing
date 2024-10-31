@@ -32,5 +32,9 @@ class TestQuadraticRoots(unittest.TestCase):
         self.assertAlmostEqual(root1, -2.0)
         self.assertAlmostEqual(root2, 0.0)
 
+    def test_invalid_input_string(self):
+        with self.assertRaises(TypeError):
+            find_roots("a", 1, 1)
+
 if __name__ == '__main__':
     unittest.main()
