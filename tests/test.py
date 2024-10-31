@@ -22,5 +22,15 @@ class TestQuadraticRoots(unittest.TestCase):
       with self.assertRaises(ZeroDivisionError):
         find_roots(0, 1, 1)
 
+    def test_b_zero(self):
+        root1, root2 = find_roots(1, 0, -4)
+        self.assertAlmostEqual(root1, -2.0)
+        self.assertAlmostEqual(root2, 2.0)
+
+    def test_c_zero(self):
+        root1, root2 = find_roots(1, 2, 0)
+        self.assertAlmostEqual(root1, -2.0)
+        self.assertAlmostEqual(root2, 0.0)
+
 if __name__ == '__main__':
     unittest.main()
